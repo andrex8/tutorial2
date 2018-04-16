@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { Facebook } from '@ionic-native/facebook';
- 
+
 @IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  
+
   isLoggedIn:boolean = false;
   users: any;
-  constructor(private fb: Facebook) {
+  constructor(private fb: Facebook, public navCtrl: NavController) {
   fb.getLoginStatus()
     .then(res => {
       console.log(res.status);
@@ -56,7 +56,9 @@ export class LoginPage {
       console.log(e);
     });
   }
-  acceso(){
 
-  }
-  }
+  itemTapped() {
+  this.navCtrl.push(HelloIonicPage);
+}
+
+}
