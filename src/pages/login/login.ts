@@ -38,7 +38,6 @@ export class LoginPage {
       .catch(e => console.log('Error logging into Facebook', e));
   }
 
-
   //Metodo para salir
   logout() {
     this.fb.logout()
@@ -58,7 +57,7 @@ export class LoginPage {
   }
 
   itemTapped() {
-  this.navCtrl.push(HelloIonicPage);
-}
+    this.navCtrl.setRoot(HelloIonicPage);
+  }
 
 }
