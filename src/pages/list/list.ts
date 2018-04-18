@@ -10,6 +10,8 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
   icons: string[];
+  tiendas: string[];
+  cafeterias: string[];
   items: Array<{title: string, note: string, icon: string, mensaje: string, titulos: string, tiendas: string, cafeterias: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
