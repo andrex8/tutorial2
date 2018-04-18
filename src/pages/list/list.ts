@@ -10,21 +10,37 @@ import { ItemDetailsPage } from '../item-details/item-details';
 })
 export class ListPage {
   icons: string[];
-  items: Array<{title: string, note: string, icon: string, mensaje: string}>;
+  items: Array<{title: string, note: string, icon: string, mensaje: string, titulos: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
+  /*  this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     'american-football', 'boat', 'bluetooth', 'build'];
 
-    this.items = [];
+
+    this.items =[];
     for(let i = 1; i < 11; i++) {
       this.items.push({
-        title: 'Item ' + i,
+        titulos: i,
         note: 'This is item #' + i,
         mensaje: 'Este es un mensaje enviado desde List',
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
-    }
+    }*/
+
+    //Aqui van las tiendas que se cargan dinamicamente con un ciclo for
+    this.tiendas=[
+        'Democracia',
+        'Almolonga'
+    ];
+
+    this.cafeterias=[
+      'Minerva',
+      'Salcaja',
+      'Parque Central',
+      'Esperanza',
+      'Nuevo Leon',
+      'Tecun'
+    ]
   }
 
   itemTapped(event, item) {

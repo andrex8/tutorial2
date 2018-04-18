@@ -3,18 +3,25 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Este es un listado</ion-title>
+    <ion-title>Puntos de venta</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
+
+  <ion-list no-lines>
+    <!--<ion-item *ngFor="let tienda of tiendas">{{tienda}}</ion-item>-->
+     <button ion-item *ngFor="let cafe of cafeterias" (click)="itemTapped($event, item)" icon-left>
+        <ion-icon name="cafe"></ion-icon>
+        Tienda  {{cafe}}
+      </button>
+      <button ion-item *ngFor="let tienda of tiendas" (click)="itemTapped($event, item)" icon-left>
+        <ion-icon name="basket"></ion-icon>
+        Tienda  {{tienda}}
+      </button>
+
+    <br>
+
+</ion-list>
+
 </ion-content>

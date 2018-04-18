@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 import { Facebook } from '@ionic-native/facebook';
+import { LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -12,7 +13,7 @@ export class LoginPage {
 
   isLoggedIn:boolean = false;
   users: any;
-  constructor(private fb: Facebook, public navCtrl: NavController) {
+  constructor(private fb: Facebook, public navCtrl: NavController, public loadingCtrl: LoadingController) {
   fb.getLoginStatus()
     .then(res => {
       console.log(res.status);
@@ -35,14 +36,14 @@ export class LoginPage {
           this.isLoggedIn = false;
         }
       })
-      .catch(e => console.log('Error logging into Facebook', e));
+      .catch(e => console.log('Error al conectarse con Facebook', e));
   }
 
   //Metodo para salir
   logout() {
     this.fb.logout()
       .then( res => this.isLoggedIn = false)
-      .catch(e => console.log('Error logout from Facebook', e));
+      .catch(e => console.log('Error al salir de Facebook', e));
   }
 
   getUserDetail(userid) {
@@ -56,8 +57,19 @@ export class LoginPage {
     });
   }
 
-  itemTapped() {
-    this.navCtrl.setRoot(HelloIonicPage);
+ itemTapped() {
+    this.navCtrl.setRoot(HelloIonicPage,{}, {animate:true, direction:'forward'});
+
   }
+
+  loader(){
+    let loader = this.loadingCtrl.create({
+      content: "Validando",
+      duration:1000
+    });
+    loader.present();
+  }
+
+
 
 }

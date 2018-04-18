@@ -17,9 +17,7 @@
     <ion-item class="">
       <ion-input placeholder="Ingresa tu contraseña" type="text" ></ion-input>
     </ion-item>
-  <br>
-
-
+    <br>
   <div *ngIf="isLoggedIn; else facebookLogin">
     <h2>Hi, {{users.name}} ({{users.email}})</h2>
     <p>
@@ -37,41 +35,8 @@
   <ng-template #facebookLogin>
     <!--<button ion-button icon-right (click)="login()">-->
     <button ion-button full icon-right (click)="itemTapped()">
-
-      Conectar con Facebook
+      Continuar con Facebook
       <ion-icon name="logo-facebook"></ion-icon>
     </button>
   </ng-template>
 </ion-content>
-
-
-
-
-
-
-
-
-
-
-
-<!--<ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-
-  <h3>¡Bienvenido a la app!</h3>
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button icon-right (click)="acceso()"> Login Facebook <ion-icon name="logo-facebook"></ion-icon> </button>
-  </p>
-
-</ion-content>-->
