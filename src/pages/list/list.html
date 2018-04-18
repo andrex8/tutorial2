@@ -11,14 +11,20 @@
 
   <ion-list no-lines>
     <!--<ion-item *ngFor="let tienda of tiendas">{{tienda}}</ion-item>-->
-     <button ion-item *ngFor="let cafe of cafeterias" (click)="itemTapped($event, item)" icon-left>
+     <!--<button ion-item *ngFor="let cafe of cafeterias" (click)="itemTapped($event, item)" icon-left>
         <ion-icon name="cafe"></ion-icon>
         Tienda  {{cafe}}
       </button>
       <button ion-item *ngFor="let tienda of tiendas" (click)="itemTapped($event, item)" icon-left>
         <ion-icon name="basket"></ion-icon>
         Tienda  {{tienda}}
-      </button>
+      </button>-->
+
+      <button ion-item *ngFor="let punto of puntos" (click)="itemTapped($event, punto)">
+      <ion-icon name="cafe" item-left id="icono"></ion-icon>
+      {{punto.nombre}}
+
+    </button>
 
     <br>
 

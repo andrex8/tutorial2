@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams } from 'ionic-angular';
-
 import { ItemDetailsPage } from '../item-details/item-details';
 
 @Component({
@@ -12,20 +10,10 @@ export class ListPage {
   icons: string[];
   tiendas: string[];
   cafeterias: string[];
+  puntos: Array<[{nombre:string, ubicacion:string, horario: string}]>;
   items: Array<{title: string, note: string, icon: string, mensaje: string, titulos: string, tiendas: string, cafeterias: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  /*  this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-    this.items =[];
-    for(let i = 1; i < 11; i++) {
-      this.items.push({
-        titulos: i,
-        note: 'This is item #' + i,
-        mensaje: 'Este es un mensaje enviado desde List',
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }*/
 
     //Aqui van las tiendas que se cargan dinamicamente con un ciclo for
     this.tiendas=[
@@ -39,13 +27,24 @@ export class ListPage {
       'Parque Central',
       'Esperanza',
       'Nuevo Leon',
-      'Tecun'
-    ]
+      'Tecun',
+      'Democracia',
+      'Almolonga'
+    ];
+
+    this.puntos=[];
+    for(let i=1; i<8; i++){
+      this.puntos.push({
+        nombre: this.cafeterias[i],
+        direccion: 'as',
+        horario: 'as'
+      });
+    }
   }
 
-  itemTapped(event, item) {
+  itemTapped(event, punto) {
     this.navCtrl.push(ItemDetailsPage, {
-      item: item
+      item: punto
     });
   }
 }
