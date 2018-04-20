@@ -9,8 +9,11 @@ export class ListPage {
   icons: string[];
   tiendas: string[];
   cafeterias: string[];
-  puntos: Array<{nombre:string, ubicacion:string, horario: string}>;
-  items: Array<{title: string, note: string, icon: string, mensaje: string, titulos: string, tiendas: string, cafeterias: string}>;
+  ubicacion: string[];
+  imagenes: string[];
+  coordenadas: string[];
+  puntos: Array<{nombre:string, ubicacion:string, horario: string, imagenes: string}>;
+  items: Array<{title: string, ubicacion: string, icon: string, mensaje: string, titulos: string, tiendas: string, cafeterias: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -19,31 +22,64 @@ export class ListPage {
         'Democracia',
         'Almolonga'
     ];
+    this.imagenes = [
+      /*Imagen de minerva */'../assets/imgs/minerva.jpg'
+    ]
 
-    this.cafeterias=[
-      'Minerva',
-      'Salcaja',
-      'Parque Central',
-      'Esperanza',
-      'Nuevo Leon',
-      'Tecun',
+    this.ubicacion=[
+      'Direccion Almolonga',
+      'Baúl',
+      'Calvario',
+      'Correos',
       'Democracia',
-      'Almolonga'
+      'Delco',
+      'Escala',
+      'Esperanza',
+      'Eureka',
+      'Los Altos',
+      'Minerva',
+      'Nuevo León',
+      'Parque Central',
+      'Salcaja',
+      'Tecún',
+      'Tinajon',
+      'Trigales'
+    ];
+
+    this.cafeterias=[ //17 tiendas
+      'Almolonga',
+      'Baúl',
+      'Calvario',
+      'Correos',
+      'Democracia',
+      'Delco',
+      'Escala',
+      'Esperanza',
+      'Eureka',
+      'Los Altos',
+      'Minerva',
+      'Nuevo León',
+      'Parque Central',
+      'Salcaja',
+      'Tecún',
+      'Tinajon',
+      'Trigales'
     ];
 
     this.puntos=[];
-    for(let i=1; i<8; i++){
+    for(let i=0 ; i<17; i++){
       this.puntos.push({
         nombre: this.cafeterias[i],
-        ubicacion: 'as',
-        horario: 'as'
+        ubicacion: this.ubicacion[i],
+        horario: 'as',
+        imagenes: this.imagenes[i]
       });
     }
   }
 
   itemTapped(event, punto) {
     this.navCtrl.push(ItemDetailsPage, {
-      item: punto
+      punto: punto
     });
   }
 }

@@ -7,6 +7,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
+import { AcercadePage } from '../pages/acercade/acercade';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ export class MyApp {
       { title: 'Inicio', component: HelloIonicPage},
       { title: 'Puntos de venta', component: ListPage },
       { title: 'Comentarios/Sugerencias', component: ComentariosPage},
-      { title: 'Salir', component: LoginPage}
+      { title: 'Acerca De', component:AcercadePage },
+      { title: 'Salir', component: LoginPage}      
     ];
   }
 
