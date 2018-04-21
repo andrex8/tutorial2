@@ -21,7 +21,9 @@ export class ListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _sanitizationService: DomSanitizer) {
 
     this.imagenes = [
+      /*Imagen de minerva */'../assets/imgs/minerva.jpg',
       /*Imagen de minerva */'../assets/imgs/minerva.jpg'
+
     ];
     this.mapas = [
       /* Almolonga */ ' ',
