@@ -23,7 +23,6 @@ export class ListPage {
     this.imagenes = [
       /*Imagen de minerva */'../assets/imgs/minerva.jpg',
       /*Imagen de minerva */'../assets/imgs/minerva.jpg'
-
     ];
     this.mapas = [
       /* Almolonga */ ' ',
@@ -43,7 +42,6 @@ export class ListPage {
       /*Tecun*/ 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1928.2051847966766!2d-91.52063182799706!3d14.858314377086327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadba1936d335f11b!2sXelapan!5e0!3m2!1ses-419!2sgt!4v1524246770782',
       /*Tinajon*/ 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.1009992278705!2d-91.53363667934288!3d14.852127699014998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d4773924a1582db!2sXelapan+Tinajon!5e0!3m2!1ses-419!2sgt!4v1524246820702',
       /*Trigales*/ 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18344.345302434296!2d-91.54076512682428!3d14.857576163930114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca97e4b596c99798!2sXelapan+Los+Trigales!5e0!3m2!1ses-419!2sgt!4v1524246864212'
-
     ];
 
     this.ubicacion=[
