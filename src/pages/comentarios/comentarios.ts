@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,9 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ComentariosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
+  mostrarAlerta(){
+    let mensaje = this.alertCtrl.create({
+        title: 'Gracias',
+        subTitle: '¡Tu comentario ha sido enviado, muchas gracias!',
+        buttons: ['OK']
+    });
+    mensaje.present();
+  };
   ionViewDidLoad() {
     console.log('ionViewDidLoad ComentariosPage');
   }

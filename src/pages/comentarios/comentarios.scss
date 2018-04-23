@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 page-comentarios {
+  font-family: 'Nunito', sans-serif;
 
 }
 .color-btn{
   background-color: #4b3621;
+}
+
+.color-btn:hover{
+  background-color: #4b4241;
 }

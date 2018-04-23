@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ItemDetailsPage } from '../item-details/item-details';
 //import { DomSanitizationService} from '@angular/platform-browser';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'page-list',
@@ -23,6 +23,7 @@ export class ListPage {
     this.imagenes = [
       /*Imagen de minerva */'../assets/imgs/minerva.jpg',
       /*Imagen de minerva */'../assets/imgs/minerva.jpg'
+      /*Siguientes imagens.. */
     ];
     this.mapas = [
       /* Almolonga */ ' ',

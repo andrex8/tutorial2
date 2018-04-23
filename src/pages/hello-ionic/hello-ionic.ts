@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
+//import { SplashScreen } from '@ionic-native/splash-screen';
 
 @Component({
   selector: 'page-hello-ionic',
