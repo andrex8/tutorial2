@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-//import { DomSanitizer} from '@angular/platform-browser';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Facebook
 import { Facebook } from '@ionic-native/facebook';
@@ -14,11 +15,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
 import { AcercadePage } from '../pages/acercade/acercade';
-
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { SplashPage } from '../pages/splash/splash';
 
 @NgModule({
   declarations: [
@@ -28,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     ComentariosPage,
-    AcercadePage
+    AcercadePage,
+    SplashPage
   ],
   imports: [
     BrowserModule,
@@ -48,8 +46,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook,
-    SplashScreen
+    Facebook
   ]
 })
 export class AppModule {}

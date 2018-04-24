@@ -22,8 +22,16 @@ export class ListPage {
 
     this.imagenes = [
       /*Imagen de minerva */'../assets/imgs/minerva.jpg',
-      /*Imagen de minerva */'../assets/imgs/minerva.jpg'
-      /*Siguientes imagens.. */
+      /*Imagen de minerva */'../assets/imgs/minerva.jpg',
+      /*Siguientes imagens.. */ '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '../assets/imgs/minerva.jpg'
     ];
     this.mapas = [
       /* Almolonga */ ' ',
