@@ -64,7 +64,7 @@ export class ListPage {
       'Esperanza',
       'Eureka',
       'Los Altos',
-      'Minerva',
+      '23 Avenida Zona 3 Quetzaltenango',
       'Nuevo León',
       'Parque Central',
       'Salcaja',
