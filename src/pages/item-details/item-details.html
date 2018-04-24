@@ -11,9 +11,12 @@
   <h3 text-center *ngIf="selectedItem" class="titulo">
     {{selectedItem.nombre}}
   </h3>
-  <h4 text-center *ngIf="selectedItem" class="texto">
+  <h5 text-center *ngIf="selectedItem" class="texto">
     <b>Dirección: </b> {{selectedItem.ubicacion}}
-  </h4>
+  </h5>
+  <h5 text-center *ngIf="selectedItem" class="texto">
+    <b>Telefono: </b> {{selectedItem.telefono}}
+  </h5>
 
   <div class="">
     <!-- Se cargan las imagenes desde el objeto -->

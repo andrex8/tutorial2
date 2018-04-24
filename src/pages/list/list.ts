@@ -15,7 +15,8 @@ export class ListPage {
   ubicacion: string[];
   imagenes: string[];
   mapas: string[];
-  puntos: Array<{nombre:string, ubicacion:string, horario: string, imagenes: string, mapas}>;
+  telefono: string[];
+  puntos: Array<{nombre:string, ubicacion:string, horario: string, imagenes: string, mapas, telefono: string}>;
   items: Array<{title: string, ubicacion: string, icon: string, mensaje: string, titulos: string, tiendas: string, cafeterias: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _sanitizationService: DomSanitizer) {
@@ -33,6 +34,22 @@ export class ListPage {
       '',
       '../assets/imgs/minerva.jpg'
     ];
+
+    this.telefono = [
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+      '77652505',
+
+    ];
+
     this.mapas = [
       /* Almolonga */ ' ',
       /* Baul */ 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340.8964144251274!2d-91.50430088938903!3d14.836329479374202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab354d80cfc408e9!2sXelapan!5e0!3m2!1ses-419!2sgt!4v1524245074926',
@@ -102,7 +119,8 @@ export class ListPage {
         ubicacion: this.ubicacion[i],
         horario: 'as',
         imagenes: this.imagenes[i],
-        mapas: this._sanitizationService.bypassSecurityTrustResourceUrl(this.mapas[i])
+        mapas: this._sanitizationService.bypassSecurityTrustResourceUrl(this.mapas[i]),
+        telefono: this.telefono[i]
       });
     }
   }
