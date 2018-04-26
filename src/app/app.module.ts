@@ -5,8 +5,9 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-//Facebook
+//Plugins
 import { Facebook } from '@ionic-native/facebook';
+import { Screenshot } from '@ionic-native/screenshot';
 
 //Importacion de pages
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
@@ -46,7 +47,8 @@ import { SplashPage } from '../pages/splash/splash';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook
+    Facebook,
+    Screenshot
   ]
 })
 export class AppModule {}

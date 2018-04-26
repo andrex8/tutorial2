@@ -87,4 +87,6 @@
         <variable name="APP_NAME" value="tutorial" />
     </plugin>
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <engine name="android" spec="~7.0.0" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="^0.1.6" />
 </widget>

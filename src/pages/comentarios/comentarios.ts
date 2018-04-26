@@ -26,9 +26,9 @@ export class ComentariosPage {
         buttons: ['OK']
     });
     mensaje.present();
+    //this.orderForm.reset();
   };
   ionViewDidLoad() {
     console.log('ionViewDidLoad ComentariosPage');
   }
-
 }
