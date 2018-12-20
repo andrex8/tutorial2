@@ -71,23 +71,23 @@ export class ListPage {
     ];
 
     this.ubicacion=[
-      'Direccion Almolonga',
-      'Baúl',
-      'Calvario',
-      'Correos',
-      'Democracia',
-      'Delco',
-      'Escala',
-      'Esperanza',
-      'Eureka',
-      'Los Altos',
-      '23 Avenida Zona 3 Quetzaltenango',
-      'Nuevo León',
-      'Parque Central',
-      'Salcaja',
-      'Tecún',
-      'Tinajon',
-      'Trigales'
+      'Calle Real 2-87 Zona 4 Almolonga Quetzaltenango     --Horario: De 6:00 AM A 9:00 PM',
+      '5 avenida 2-11 zona 5 Colonia del Empleado Municipal Quetaltenango',
+      '4 calle 19-02 Zona 1 Quetzaltenango',
+      '15 Avenida Locales B Y C 3-86 Zona 1 Quetzaltenango',
+      'Calle Rodolfo Robles 15-36 Zona 3 Quetzaltenango',
+      'Avenida las Americas 9-50 zona 3 locales 11-15 Super Centro Comercial Delco S.A. Quetzaltenango',
+      '13 avenida local 1, plaza Escala 4-50 Zona 3 Quetaltenango',
+      '1era calle 5-58 Zona 1 La Esperanza, Quetzaltenango',
+      '4ta calle 14-12 Zona 3 Quetzaltenango',
+      '19 avenida 6-60 Zona 3 Quetzaltenango',
+      '4 a calle 22-35 zona 3 Quetzaltenango',
+      '4ta calle 25-92 Zona 1 Barrio Nuevo León Quetzaltenango',
+      '12 avenida 5-44 zona 1 Quetzaltenango',
+      '3 avenida 3-40 Zona 1 Salcaja, Quetzaltenango.',
+      '9 calle 26-15 Zona 7 Quetzaltenango',
+      'Diagonal 2 27-62 Zona 3 Quetzaltenango',
+      '29 Avenida 13-88 zona 7 Colonia Los Trigales Quetzaltenango'
     ];
 
     this.cafeterias=[ //17 tiendas

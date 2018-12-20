@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 //Se importan las paginas
@@ -8,7 +7,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
 import { AcercadePage } from '../pages/acercade/acercade';
-
+//import { RegistroPage } from '../pages/registro/registro';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -37,7 +36,8 @@ export class MyApp {
       { title: 'Puntos de venta', component: ListPage, icon:"basket"},
       { title: 'Comentarios', component: ComentariosPage, icon:"chatbubbles"},
       { title: 'Acerca De', component:AcercadePage, icon:"information-circle"},
-      { title: 'Salir', component: LoginPage, icon:"close-circle"}
+      { title: 'Salir', component: LoginPage, icon:"close-circle"},
+    //  { title: 'Registro', component: RegistroPage, icon: "key"},
     ];
   }
 

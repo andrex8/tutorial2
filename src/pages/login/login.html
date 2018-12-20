@@ -2,20 +2,34 @@
   <ion-navbar>
     <ion-title>Login</ion-title>
   </ion-navbar>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+  <script src="firebase.js" charset="utf-8"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDUVaEsT0ShLoeDKihjBeYyNtnoNPuUPP4",
+        authDomain: "drupalfacebook-22f0d.firebaseapp.com",
+        databaseURL: "https://drupalfacebook-22f0d.firebaseio.com",
+        projectId: "drupalfacebook-22f0d",
+        storageBucket: "drupalfacebook-22f0d.appspot.com",
+        messagingSenderId: "881271025074"
+      };
+      firebase.initializeApp(config);
+    </script>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
-    <img src="../assets/imgs/xelapan.jpg"/>
+    <img src="../assets/imgs/logox.png"/>
   </ion-card>
   <br><br>
 
     <ion-item>
-      <ion-input placeholder="Ingresa tu usuario" type="text" name="title"></ion-input>
+      <ion-input id="email" placeholder="Ingresa tu usuarioo" type="text" name="title"></ion-input>
     </ion-item>
     <!-- or with standalone set to true -->
     <ion-item class="">
-      <ion-input placeholder="Ingresa tu contraseña" type="text" ></ion-input>
+      <ion-input id="password" placeholder="Ingresa tu contraseña" type="password" ></ion-input>
     </ion-item>
     <br>
   <div *ngIf="isLoggedIn; else facebookLogin">
@@ -33,10 +47,20 @@
     </p>
   </div>
   <ng-template #facebookLogin>
-    <!--<button ion-button icon-right (click)="login()">-->
-    <button ion-button full icon-right (click)="itemTapped()">
+    <!--El primero funciona con facebook y el segundo solo deja pasar, para pruebas -->
+
+    <button ion-button icon-right (click)="itemTapped()">
+    <!--<button ion-button full icon-right (click)="itemTapped()">-->
       Continuar con Facebook
       <ion-icon name="logo-facebook"></ion-icon>
     </button>
+    <p> ¿No tienes usuario? </p>
+    <!--<button ion-button full icon-right (click)="itemTapped()">-->
+      ¡Registrate!
   </ng-template>
 </ion-content>
+
+
+<ion-footer *ngIf="!isUserLoggedIn">
+  <button ion-button block (click)="loginWithFB()">Login with Facebook</button>
+</ion-footer>
